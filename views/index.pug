@@ -1,0 +1,121 @@
+extends layout/common
+
+block vars
+    -title = 'headphone-shop-clone'
+    -bodyClass = 'home-page'
+block main
+    .main 
+        //-======== slider =============================
+        section.section--slider 
+            .slider
+                +sliderItem("../images/enjoy.jpg", 'rgb(226, 162, 113)', 'Get them all', 'Best performing products', 'We have what you\'re looking for in all tech industry' )
+                +sliderItem('../images/blue-headphones.jpg', 'rgb(0, 157, 206)', 'What you were waiting for?', 'The Headphones Collection', 'Discover our selection of the best Headphones')
+                +sliderItem('../images/app-deals.jpg', 'rgb(92, 216, 217)', 'Download the App', 'Shop on the Go', 'Get the best of our store at your fingertips')
+                +sliderItem('../images/happy-girl.jpg', 'rgb(240, 197, 87)', 'Enjoy your world', 'What\'s makes you happy', 'We have all the products to make your life easier')
+                a.slider__forwarded.next(href="#")
+                    <i class="fas fa-arrow-right"></i>
+                a.slider__forwarded.prev(href="#")
+                    <i class="fas fa-arrow-left"></i>
+        //- ============= Deals ===================
+        section.section--deal
+            .container.deal
+                .deal__week 
+                    .deal__week--top
+                        p Weekend Deals
+                        a View more
+                    .deal__week--bottom
+                        +dealWeekItem('../images/earphones.jpg', '$', '12.15', '25% Off')
+                        +dealWeekItem('../images/speaker.jpg', '$', '1.45', '15% Off')
+                        +dealWeekItem('../images/headphone.jpg', '$', '19.99', '45% Off')
+                        +dealWeekItem('../images/vrglasses.jpg', '$', '29.99', '18% Off')
+                .deal__form
+                    p Register to get the best deals
+                    p By registering you accept the 
+                        a(href="#") Terms and Conditions
+                        |  policy
+                    form.form
+                        input(type="text", placeholder="Full Name")
+                        input(type="text", placeholder="Email")
+                        button.btn.btn--primary Register
+            .container.offers
+                +offersItem('../images/vrglasses.png', 'VR Glasses', 'Discover what\'s new on Virtual Reality', 'Shop VR Glasses', 'rgb(0,160,224)')
+                +offersItem('../images/monitor.png', 'Monitors', '$30 Off on selected monitors', 'Shop Monitors', 'rgb(85, 51, 255)')
+        section.section--trendy
+            .container.trendy
+                .main__heading
+                    p Discover
+                    h3 What's Trending Now
+                .trendy__list
+                    +trendyItem('../images/computerconnection.png', 'Wireless &amp; Bluetooth', 'Bluetooh Mouse', '$25.',  '00', '$45.', '00', 'fas fa-star')
+                    +trendyItem('../images/externalharddrive.png', 'Computer &amp; Electronics', 'External Hard Drive', '$78.',  '00', '', '', 'fas fa-star')
+                    +trendyItem('../images/modernspeakers.jpg', 'Speakers', 'Modern Speakers', '$124.',  '00', '$154.', '00', 'fas fa-star')
+                    +trendyItem('../images/vrglassesdual.png', 'Virtual Reality', 'Virtual Reality Glasses', '$145.',  '00', '', '', 'fas fa-star')
+                    +trendyItem('../images/dualshock.png', 'Gaming &amp; Consoles', 'Dual Shock Controller', '$87.',  '00', '$54.', '00', 'fas fa-star')
+                    +trendyItem('../images/wiredmouse.png', 'Computer &amp; Electronics', 'Wired Classic Mouse', '$12.',  '00', '', '', 'far fa-star')
+                    +trendyItem('../images/audioclassicmic.png', 'Professional Audio', 'Classic Microphone', '$25.',  '00', '$45.', '00', 'far fa-star')
+                    +trendyItem('../images/wireless-headphones.png', 'Wireless &amp; Bluetooth', 'Wireless Headphones', '$45.',  '00', '', '', 'far fa-star')
+                .trendy__bottom
+                    a.btn
+                        span More products
+                        i.fas.fa-chevron-right
+        section.section--edge 
+            .container.edge
+                .edge__item
+                    h2 35% Off on Tech Gadgets
+                    a.btn.btn--primary Shop Now
+                .edge__item
+                    p All popular technology gadgets are up to 35% off. Shop now for your favorites tablets, smartphones, watches and more"
+                    ul.menu
+                        li 
+                            a(href="#") Tablets
+                        li 
+                            a(href="#") Smartphones
+                        li 
+                            a(href="#") Watches
+        //- ================= promos =========
+        section.section--promo
+            .container.promo
+                .promo__item
+                    +promoItem('../images/wearable.jpg', 'Wearable', 'Smart electronic devices for your day to day life.', 'Shop Wearable')
+                    +promoItem('../images/innovative.jpg', 'Innovative', 'Make your life easeier with these smart solutions.', 'Shop Innovative')
+                .promo__item
+                    +promoItem('../images/smartphone.jpg', 'Smartphones', 'Your personal smartphone are just one click away.', 'Shop Smartphones')
+                .promo__item
+                    +promoItem('../images/wifi.jpg', 'Wifi', 'Exclusive high quality wifi technology to extend your network.', 'Shop Wifi', 'text--black')
+                    +promoItem('../images/headphones-yellow-bg.jpg', 'Headphones', 'Enjoy your favorite playlist with an amazing sound quality.', 'Shop Headphones')
+        //- ============= Banners ============== 
+        section.section--banner
+            .container.banner
+                .banner__item
+                    .shape
+                        .shape--circle
+                    .banner__item__content
+                        +bannerText('Hurry up! Limited time offer', 'Pro Graphic Tablets', '', '')
+                        img(src='../images/tablet-with-pen.png')
+                .banner__item
+                    .shape
+                        .shape--ring.shape--ring-1
+                        .shape--ring.shape--ring-2
+                        .shape--ring.shape--ring-3 
+                    .banner__item__content
+                        +bannerText('', '', 'Get up to 50% Off Today', 'On branded gadgets' )
+        //- ============= brands =============
+        section.section--brand
+            .container.brand
+                .main__heading
+                    p Brands
+                    h3 We work with
+                .brand__box
+                    +brandItem('../images/1.svg')
+                    +brandItem('../images/2.svg')
+                    +brandItem('../images/3.svg')
+                    +brandItem('../images/4.svg')
+                    +brandItem('../images/5.svg')
+                    +brandItem('../images/6.svg')
+                    +brandItem('../images/7.svg')
+                    +brandItem('../images/8.svg')
+                    +brandItem('../images/9.svg')
+                    +brandItem('../images/10.svg')
+                    +brandItem('../images/11.svg')
+                    +brandItem('../images/12.svg')
+

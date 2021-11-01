@@ -1,0 +1,63 @@
+@import "variables";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  color: $text-color;
+  font-size: 1.4rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.container {
+  max-width: $container;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.shape {
+  &--circle {
+    position: absolute;
+    background: rgba(56,76,116,.5);
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    opacity: .2;
+    transform: translate3d(25%,-25%,0);
+    top: 0;
+    right: 0;
+  }
+}
+.text {
+  &--primary {
+    color: $btn-primary;
+  }
+  &--success {
+    color: #00c9b7;
+  }
+  &--warning {
+    color: #feb868;
+  }
+  &--info {
+    color: #00a0e0;
+  }
+}

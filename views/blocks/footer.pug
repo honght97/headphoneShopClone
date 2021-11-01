@@ -1,0 +1,98 @@
+footer.footer
+    .footer__top
+        .container.footer__top__menu
+            .footer__top__item
+                div
+                    h6 All Products
+                    nav.footer__top__item__menu
+                        +footerNavItem('Headphones')
+                        +footerNavItem('Portable Speakers')
+                        +footerNavItem('Audio Accessories')
+                        +footerNavItem('Earbuds')
+                        +footerNavItem('Speakers')
+                        +footerNavItem('Subwoofers')
+                        +footerNavItem('Sound Bars')
+                        +footerNavItem('Amplifiers')
+                        +footerNavItem('Bluetooth')
+                        +footerNavItem('LED TV\'s')
+                        +footerNavItem('Blue-Ray')
+                        +footerNavItem('DVD Players')
+                        +footerNavItem('Watches')
+            .footer__top__item
+                div
+                    h6 Categories
+                    nav.footer__top__item__menu
+                        +footerNavItem('Wireless \& Bluetooth')
+                        +footerNavItem('Computer \& Electronics')
+                        +footerNavItem('Speakers')
+                        +footerNavItem('Virtual Reality')
+                        +footerNavItem('Gaming \& Consoles')
+                        +footerNavItem('TVs')
+                div
+                h6 Information
+                    nav.footer__top__item__menu
+                        +footerNavItem('About company')
+                        +footerNavItem('Brands')
+                        +footerNavItem('Meet the Team')
+                        +footerNavItem('Contact Info')
+                        +footerNavItem('FAQs')
+            .footer__top__item
+                div
+                    h6 Our Newsletter
+                    form(action="#")
+                        input(type="email", name="", placeholder="Enter your email")
+                        button.btn.btn--register register
+                div
+                    h6 Download the app
+                    nav.footer__top__item__menu.menu__app
+                        a(href="#").btn.btn--register
+                            img(src="../images/apple.svg", alt="")
+                            p
+                                span Get it on the
+                                span App Store
+                        a(href="#").btn.btn--register
+                            img(src="../images/google-play.svg", alt="")
+                            p
+                                span Download on
+                                span Google Play
+    .footer__service
+        .container.service
+            .service__item
+                +footerServiceItem('../images/072-sale.svg', 'Deals & Promotions')
+            .service__item
+                +footerServiceItem('../images/026-delivery-truck-2.svg', 'Free Shipping')
+            .service__item
+                +footerServiceItem('../images/060-package-1.svg', 'Easy Return')
+            .service__item
+                +footerServiceItem('../images/056-box.svg', 'Order Tracking')
+            .service__item
+                +footerServiceItem('../images/076-security.svg', 'Secure Checkout')
+            .service__item
+                +footerServiceItem('../images/020-chat.svg', 'Customer Support')
+    .footer__bottom
+        .container
+            .support
+                .support__item
+                    nav.footer__top__item__menu
+                        +footerNavItem('Support')
+                        +footerNavItem('Privacy')
+                        +footerNavItem('Terms of use')
+                        +footerNavItem('Return Policy')
+                .support__item
+                    a(href="#")
+                        img(src="../images/logo-light.png", alt="")
+                .support__item
+                    nav.support__item__social
+                        +footerSocialIcon('fab fa-twitter')
+                        +footerSocialIcon('fab fa-facebook')
+                        +footerSocialIcon('fab fa-instagram')
+                        +footerSocialIcon('fab fa-pinterest')
+                        +footerSocialIcon('fab fa-youtube')                           
+            .payment
+                .payment__item
+                    p
+                        span Clone 2021 
+                        a(href="#") by Honght
+                        span at 5studios.net
+                .payment__item 
+                    img(src="../images/payment-methods.png")

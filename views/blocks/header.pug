@@ -1,0 +1,163 @@
+nav.header
+    .container.nav
+        .nav__logo
+            img.nav__logo-sticky(src="/images/logo.png")
+            img.nav__logo-light(src="/images/logo-light.png")
+        .nav__menu
+            ul.nav__menu__list
+                +navMenuItem("Home")
+                +navMenuItem("Blocks")
+                +navMenuItem("Pages")
+                +navMenuItem("UI Components")
+                +navMenuItem("Blog")
+                +navMenuItem("Shop")
+        .nav__btn 
+            a.btn.btn--solid.nav__btn--login.btn--round(href="#")
+                <i class="fas fa-sign-in-alt"></i>
+                span Login
+                
+            a.btn.btn--primary.nav__btn--signup.btn--round(href="#") 
+                <i class="fas fa-user-plus"></i>
+                spans Signup
+        .submenu
+            .submenu__item.active
+            .submenu__item
+                .submenu--first
+                    ul.submenu--first__item
+                        +submenuFirst('Call to actions')
+                        +submenuFirst('Contact')
+                        +submenuFirst('Counters')
+                        +submenuFirst('FAQs')
+                    ul.submenu--first__item
+                        +submenuFirst('Footers')
+                        +submenuFirst('Forms')
+                        +submenuFirst('Navbar')
+                        +submenuFirst('Navigation')
+                    ul.submenu--first__item
+                        +submenuFirst('Pricing')
+                        +submenuFirst('Sliders')
+                        +submenuFirst('Team')
+                        +submenuFirst('Testimonials')
+                .submenu--second
+                    h1
+                       <i class="fas fa-arrow-right"></i>
+                       span Coming soon
+                    .submenu--second__list
+                        +submenuSecond('Dividers')
+                        +submenuSecond('Gallery')
+                        +submenuSecond('Screenshots')
+            .submenu__item
+                .submenu__item__title
+                    h3 
+                        span Useful pages
+                        | you'll need
+                    p Get a complete design stack
+
+                .submenu--first
+                    ul.submenu--first__item
+                        h4 Error
+                        +submenuFirst('403 Error')
+                        +submenuFirst('404 Error')
+                        +submenuFirst('500 Error')
+                    ul.submenu--first__item
+                        h4 User
+                        +submenuFirst('Login')
+                        +submenuFirst('Register')
+                        +submenuFirst('Forgot')
+                    ul.submenu--first__item
+                        h4 Extra
+                        +submenuFirst('Pricing')
+                        +submenuFirst('Terms')
+                        +submenuFirst('FAQ')
+                .submenu--second
+                    .submenu--second__list.submenu--second__pages
+                        +submenuSecond('About', 'far fa-building submenu--second__pages__icon ')
+                        +submenuSecond('Contact', 'far fa-envelope submenu--second__pages__icon')
+                        +submenuSecond('Pricing', 'fas fa-hand-holding-usd submenu--second__pages__icon')
+            .submenu__item
+                .submenu--second.submenu__ui
+                    .submenu--second__list.submenu__ui--top
+                        +submenuSecond('Get to know DashCore color options', 'fas fa-palette submenu__ui--top__icon ', 'Colors')
+                        +submenuSecond('All forms elements', 'fab fa-wpforms submenu__ui--top__icon', 'Forms')
+                        +submenuSecond('Useful accordion elements', 'fas fa-bars submenu__ui--top__icon', 'Accordion')  
+                        +submenuSecond('Comply with the hideous EU Cookie Law', 'fas fa-cookie-bite submenu__ui--top__icon', 'CookieLaw') 
+                        h4 Huge components list    
+                .submenu--first
+                    ul.submenu--first__item
+                        +submenuFirst('Alerts')
+                        +submenuFirst('Badges')
+                        +submenuFirst('Buttons')
+                    ul.submenu--first__item
+                        +submenuFirst('Overlay')
+                        +submenuFirst('Progress')
+                        +submenuFirst('Lightbox')
+                    ul.submenu--first__item
+                        +submenuFirst('Tabs')
+                        +submenuFirst('Tables')
+                        +submenuFirst('Typography')
+                .submenu--second
+                    .submenu--second__list.submenu__ui--bottom
+                        +submenuSecond('Wizard')
+                        +submenuSecond('Timeline ', 'fas fa-ban submenu__ui--bottom__icon')
+                        +submenuSecond('Process ', 'fas fa-ban submenu__ui--bottom__icon')         
+            .submenu__item
+                .submenu--first
+                    ul.submenu--first__item
+                        h4 Full width
+                        +submenuFirst('Single post')
+                        +submenuFirst('Posts Grid')
+                    ul.submenu--first__item
+                        h4 Sidebar left
+                        +submenuFirst('Single post')
+                        +submenuFirst('Posts Grid')
+                    ul.submenu--first__item
+                        h4 Sidebar right
+                        +submenuFirst('Single post')
+                        +submenuFirst('Posts Grid')
+            .submenu__item
+                .submenu--second.submenu__ui
+                    .submenu--second__list.submenu__ui--top
+                        +submenuSecond('Online store home with an outstanding UX', 'fas fa-shopping-basket submenu__ui--top__icon ', 'Home')
+                        +submenuSecond('Online store shopping cart', 'fas fa-shopping-cart submenu__ui--top__icon', 'Cart')
+                .submenu--second
+                    .submenu--second__list.submenu__shop
+                        +submenuSecond('', 'fas fa-money-check-alt', 'Checkout')
+                        +submenuSecond('Customer ', 'fas fa-chevron-right')
+                        +submenuSecond('Shipping Information ', 'fas fa-chevron-right') 
+                        +submenuSecond('Payment Methods ', 'fas fa-chevron-right')
+                        +submenuSecond('Order Review ', 'fas fa-chevron-right') 
+        .hamburger#hamburgers
+            span.line
+            span.line
+            span.line
+        //- ========== mobile menu =========================
+        .nav__menu--mobile
+          .nav__menu--mobile__item
+            h4 Pages
+            ul.nav__menu__list
+                +navMenuMobileItem('About', 'far fa-building', 'text--primary')
+                +navMenuMobileItem('Contact', 'far fa-envelope',  'text--success')
+                +navMenuMobileItem('Pricing', 'fas fa-hand-holding-usd', 'text-warning')
+                +navMenuMobileItem('FAQs', 'far fa-question-circle', 'text-info')
+          .nav__menu--mobile__item
+            h4 Components
+            div
+                ul.nav__menu__list
+                    +navMenuMobileItem('Alerts')
+                    +navMenuMobileItem('Badges')
+                    +navMenuMobileItem('Buttons')
+                    +navMenuMobileItem('Colors')
+                    +navMenuMobileItem('Accordion')
+                    +navMenuMobileItem('Cookielaw')
+                ul.nav__menu__list
+                    +navMenuMobileItem('Overlay')
+                    +navMenuMobileItem('Progress')
+                    +navMenuMobileItem('Lightbox')
+                    +navMenuMobileItem('Tabs')
+                    +navMenuMobileItem('Tables')
+                    +navMenuMobileItem('Typography')
+          .nav__menu--mobile__item
+            ul.nav__menu__list
+              +navMenuMobileItem('Sign in', 'fas fa-arrow-right', 'mb-sign')
+                
+            

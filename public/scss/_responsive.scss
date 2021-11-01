@@ -1,0 +1,252 @@
+/* ============== Mobile ============ */
+@media (max-width: 46.1875em) {
+  .container {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+  .main {
+    & .slider__item__content {
+        padding-bottom: 5rem;
+        padding-top: 5rem;
+        &--child {
+          padding-bottom: 10rem;
+          text-align: center;
+        }
+    }
+    .section--deal {
+      .deal {
+        row-gap: 2.4rem;
+        &__week, &__form {
+          grid-column: 1/4;
+        }
+        &__week {
+          &--bottom {
+            grid-template-columns: 1fr 1fr;
+            row-gap: .8rem;
+          }
+        }
+      }
+      .offers {
+        row-gap: 2.4rem;
+        &__outer {
+          grid-column: 1/3;
+          background-position: 20px 20px;
+          background-size: 60px;
+          &__content {
+            padding-left: 6rem;
+          }
+        }
+      }
+    }
+    .section--trendy {
+      .trendy {
+        &__list {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+    .section--edge {
+      padding: 5rem 0;
+      .edge {
+        grid-template-columns: 1fr;
+        &__item {
+          &:nth-of-type(1) {
+            h2 {
+              font-size: 2.5rem;
+            }
+            a {
+              padding-left: 1rem !important;
+              padding-right: 1rem !important;
+            }
+          }
+        }
+      }
+    }
+    .section--banner {
+      margin: 5rem 0;
+      .banner {
+        grid-template-columns: 1fr;
+        row-gap: 2.4rem;
+        &__item {
+          &__content {
+            padding: 0;
+            &--text {
+              text-align: center;
+              padding: 1rem;
+            }
+            img {
+              width: 60%;
+            }
+          }
+          .shape--ring-1 {
+            left: -30px;
+          }
+        }
+      }
+    }
+    .section--brand {
+      .brand {
+        &__box {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+  .footer {
+    &__top {
+      &__menu {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    &__service {
+      .service {
+        border-bottom: none;
+        padding-bottom: 0;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 2.4rem;
+      }
+    }
+    &__bottom {
+      .support {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2.4rem;
+        padding-top: 5rem;
+        &__item {
+          &__social {
+            justify-content: center;
+          }
+        }
+      }
+      .payment {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2.4rem;
+        justify-content: center;
+        &__item {
+          p {
+            justify-content: center;
+          }
+          &:last-child {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+/*============= Mobile & Tablet =========== */
+@media (max-width: 63.9375em) {
+    
+    .header {
+        background-color: #fff;
+        .nav {
+            justify-content: space-between;
+            &__logo {
+                &-light {
+                    display: none;
+                }
+                &-sticky {
+                    display: block;
+                }
+            }
+            &__btn {
+                display: none;
+            }
+            &__menu {
+                display: none;
+            }
+            .hamburger {
+                
+            }
+        }
+    }
+    .main {
+        top: 0;
+        .section--promo {
+          .promo {
+            grid-template-columns: 1fr;
+            row-gap: 2.4rem;
+          }
+        }
+        .section--brand {
+          .brand {
+            &__box {
+              margin: 5rem 0;
+            }
+          }
+        }
+    }
+    .footer {
+      &__top {
+        .menu__app {
+          flex-direction: column;
+          row-gap: 2.4rem;
+          a {
+            width: 100%;
+          }
+        }
+      }
+      &__service {
+        .service {
+          &__item {
+            h6 {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+}
+/* ============ Tablet ========== */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+  .container {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+  .main {
+    & .slider__item__content {
+        padding-bottom: 12rem;
+        padding-top: 12rem;
+        &--child {
+          padding: 0 5rem 5rem 5rem;
+        }
+    }
+    .section--deal {
+      .deal {
+        row-gap: 2.4rem;
+        &__week, &__form {
+          grid-column: 1/4;
+        }
+      }
+      .offers {
+        .offers__outer__content {
+          padding-left: 12rem;
+        }
+      }
+    }
+    .section--trendy {
+      .trendy {
+        &__list {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+  .footer {
+    &__service {
+      .service {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+/* ================= PC ========== */
+@media (min-width: 64em) { 
+    .header {
+        .nav {
+            .hamburger {
+                display: none;
+            }
+        }
+    }
+}

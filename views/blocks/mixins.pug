@@ -1,0 +1,130 @@
+mixin navMenuItem(title) 
+    li.nav__menu__list__item
+        a.nav__menu__list__item__link= title
+        if block 
+        block 
+mixin sliderItem(src, bgCl, h4, h1, p)
+    if(scr && bgCl)
+    .slider__item.fade(style=`background-image: url('${src}'); background-color:${bgCl}`)
+        .container.slider__item__content
+            .slider__item__content--child
+                if(h4)
+                h4= h4 
+                if(h1)
+                h1= h1 
+                if(p)
+                p= p 
+                a.btn.btn--primary Shop now
+                                <i class="fas fa-chevron-right slider__icon"></i>
+        if block 
+        block 
+mixin submenuFirst(a)
+    li.submenu--first__item--sub
+        if(a)
+        a.submenu--first__list__item--sub__link(href="#")= a
+        if block 
+        block 
+mixin submenuSecond(text, icon, h3)
+    .submenu--second__list__item
+        if(icon)
+        i.submenu--second__icon(class= icon)
+        .submenu--second__list__item--text
+            if(h3)
+            h3= h3
+            if(text)
+            p= text
+            if block 
+            block
+mixin dealWeekItem(src, text, price, saleOff)
+    .deal__week__item
+        a(href="#")
+            if(src)
+            img(src= src, alt="")
+            if(text)
+            p=text
+                if(price)
+                span= price
+                if(saleOff)
+                span= saleOff
+mixin offersItem(src, caption, text, btnText, bgCl)
+    if(src)
+    .offers__outer(style=`background-image: url('${src}'); background-color:${bgCl}`)
+        .offers__outer__content
+            if(caption)
+            h3= caption
+            if(text)
+            p= text
+            if(btnText)
+            a.btn= btnText
+mixin trendyItem( src, category, title, priceNew, supPriceNew, priceOld, supPriceOld, iconStar)
+    .trendy__list__item 
+        a(href="#")
+            img(src= src)
+        a.btn.icon--heart.btn--heart(href="#")
+            i.far.fa-heart
+        .trendy__list__item--body
+            a.trendy__list__item--body__category= category
+            h3
+                a.trendy__list__item--body__title(href="#")= title
+            .trendy__list__item--body__center
+                .trendy__list__item--body__center--price 
+                    p
+                        span.trendy__list__item--body__center--price--new= priceNew
+                        sup.trendy__list__item--body__center--price--supnew= supPriceNew
+                    p 
+                        span.trendy__list__item--body__center--price--old= priceOld
+                        sup.trendy__list__item--body__center--price--supold= supPriceOld
+                .trendy__list__item--body__center--rating
+                    i(class= iconStar)
+                    i(class= iconStar)
+                    i(class= iconStar)
+                    i(class= iconStar)
+                    i(class= iconStar)
+                    i(class= iconStar)
+        .trendy__list__item--bottom
+            button.btn.btn--primary
+                i.fas.fa-shopping-cart
+                span Add to Cart
+            a(href="#") 
+                    i.far.fa-eye
+                    span Quick view
+mixin promoItem(src, caption, text, btn)
+    .promo__item__inner
+        .promo__item__bg(style=`background-image: url('${src}')`)
+        .promo__item__content
+            h4= caption
+            p= text
+            a.btn.btn--promo(href="#")= btn
+mixin bannerText(caption1, caption2, caption3, text)
+    .banner__item__content--text
+        if(caption1)
+        h4= caption1
+        if(caption2)
+        h3= caption2
+        if(caption3)
+        h5= caption3
+        if(text)
+        p= text
+        a.btn.btn--primary.btn--banner(href="#") Shop Now
+
+mixin brandItem(src)
+    .brand__box__item
+        a(href="#")
+            img(src= src)
+mixin footerNavItem(text)
+    a(href="#")= text
+mixin footerServiceItem(src, title)
+    .service__item__icon
+        img(src= src)
+    h6= title
+mixin footerSocialIcon(icon)
+    a(href="#").btn.btn--social
+        i(class= icon)
+
+mixin navMenuMobileItem(text, icon, cl)
+    if(cl)
+    a(class= cl, href="#")
+        if(icon)
+        i(class= icon)
+        span= text
+
